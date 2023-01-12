@@ -1,7 +1,11 @@
 package Entity;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Objects;
+
+import Entity.EnumClasses.OrderStatus;
+import Entity.EnumClasses.PaymentMethod;
 
 public class Order {
 	
@@ -10,10 +14,11 @@ public class Order {
 	private LocalDate orderedDate;
 	private double orderPrice;
 	private OrderStatus orderStatus;
-	private Address orderDeliAddress;
+	private List<Address> orderDeliAddress;
 	private PaymentMethod orderPaymentType;
+	
 	public Order(int orderId, String orderName, LocalDate orderedDate, double orderPrice, OrderStatus orderStatus,
-			Address orderDeliAddress, PaymentMethod orderPaymentType) {
+			List<Address> orderDeliAddress, PaymentMethod orderPaymentType) {
 		super();
 		this.orderId = orderId;
 		this.orderName = orderName;
@@ -53,10 +58,10 @@ public class Order {
 	public void setOrderStatus(OrderStatus orderStatus) {
 		this.orderStatus = orderStatus;
 	}
-	public Address getOrderDeliAddress() {
+	public List<Address> getOrderDeliAddress() {
 		return orderDeliAddress;
 	}
-	public void setOrderDeliAddress(Address orderDeliAddress) {
+	public void setOrderDeliAddress(List<Address> orderDeliAddress) {
 		this.orderDeliAddress = orderDeliAddress;
 	}
 	public PaymentMethod getOrderPaymentType() {
