@@ -1,4 +1,4 @@
-package Entity;
+package Entity.EnumClasses;
 
 public enum PaymentMethod {
 	
